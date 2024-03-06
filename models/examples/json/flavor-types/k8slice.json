@@ -1,0 +1,24 @@
+{
+    "K8Slice": {
+      "Characteristics": {
+        "CPU": 2,
+        "Pods": 5,
+        "Memory": 4096,
+        "GPU": 1,
+        "Storage": 50,
+        "SecurityStandards": ["SOC2"]
+      },
+      "Policy": {
+        "Aggregatable": {
+          "MinCount": 1,
+          "MaxCount": 3
+        },
+        "Partitionable": {
+          "CpuMin": 1,
+          "MemoryMin": 2048,
+          "CpuStep": 1,
+          "MemoryStep": 1024
+        }
+      }
+    }
+  }
