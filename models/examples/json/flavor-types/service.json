@@ -1,0 +1,13 @@
+{
+    "Service": {
+      "Characteristics": {
+        "Name": "My High Performance Database",
+        "Description": "A powerful database service with high availability and performance.",
+        "Tags": ["database", "high_performance", "ha"],
+        "Plan": "Enterprise"
+      },
+      "FlavorType": {
+        "$ref": "service-types/db.json"
+      }
+    }
+  }
