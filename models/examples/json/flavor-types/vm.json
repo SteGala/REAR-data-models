@@ -1,0 +1,18 @@
+{
+    "VM": {
+      "Characteristics": {
+        "Architecture": "x86_64",
+        "CPU": 4,
+        "Memory": 8192,
+        "GPU": 1,
+        "Storage": 100,
+        "SecurityStandards": ["GDPR"]
+      },
+      "Policy": {
+        "Aggregatable": {
+          "MinCount": 1,
+          "MaxCount": 10
+        }
+      }
+    }
+  }
