@@ -11,3 +11,7 @@
 ## Sensor
 
 ![sensor](models/examples/img/flavor-types/sensor.png)
+
+## Service
+
+![service](models/examples/img/flavor-types/service.png)
