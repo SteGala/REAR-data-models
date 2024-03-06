@@ -1,0 +1,63 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "title": "Sensor",
+    "properties": {
+        "Characteristics": {
+            "type": "object",
+            "properties": {
+                "SensorType": {
+                    "type": "string",
+                    "description": "The type of sensor"
+                },
+                "SensorModel": {
+                    "type": "string",
+                    "description": "The model of sensor"
+                },
+                "SensorManufacturer": {
+                    "type": "string",
+                    "description": "The manufacturer of sensor"
+                },
+                "SamplingRate": {
+                    "type": "integer",
+                    "description": "The sampling rate of the sensor in milliseconds"
+                }
+            }
+        },
+        "SecurityStandards": {
+            "type": "array",
+            "items": {
+                "type": "string",
+                "description": "Security standards supported by the Flavor (e.g., GDPR)."
+            }
+        },
+        "AccessType": {
+            "oneOf": [
+                {
+                    "type": "object",
+                    "title": "HTTP",
+                    "properties": {
+                        "method": {
+                            "type": "array",
+                            "items": {
+                                "type": "string",
+                                "description": "HTTP method supported."
+                            }
+                        }
+                    }
+                },
+                {
+                    "type": "object",
+                    "title": "MQTT",
+                    "properties": {
+                        "QoS": {
+                            "type": "string",
+                            "title": "QoS",
+                            "description": "QoS level guaranteed."
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}

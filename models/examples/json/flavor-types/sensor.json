@@ -1,0 +1,16 @@
+{
+    "Sensor": {
+      "Characteristics": {
+        "SensorType": "Temperature",
+        "SensorModel": "ABC123",
+        "SensorManufacturer": "XYZ Company",
+        "SamplingRate": 1000
+      },
+      "SecurityStandards": ["UL Listed"],
+      "AccessType": {
+        "HTTP": {
+          "method": ["POST", "GET"]
+        }
+      }
+    }
+  }
