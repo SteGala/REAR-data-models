@@ -6,7 +6,7 @@
         "Tags": ["database", "high_performance", "ha"],
         "Plan": "Enterprise"
       },
-      "FlavorType": {
+      "ServiceType": {
         "$ref": "service-types/db.json"
       }
     }

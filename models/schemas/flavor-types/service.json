@@ -34,7 +34,7 @@
             ],
             "additionalProperties": false
         },
-        "FlavorType": {
+        "ServiceType": {
             "oneOf": [
                 {
                     "$ref": "service-types/db.json"
