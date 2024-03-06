@@ -1,17 +1,30 @@
-# Flavor Types
+# Resources
 
-## K8Slice
+The resource data model can be summarized in the following:
+ - Flavor
+ - FlavorType
+   - [K8Slice](#K8Slice)
+   - [VM](#VM)
+   - [Service](#Service)
+     - DB
+   - [Sensor](#Sensor)
+
+## Flavor
+
+## FlavorType
+
+### K8Slice
 
 ![K8slice](models/examples/img/flavor-types/k8slice.png)
 
-## VM
+### VM
 
 ![vm](models/examples/img/flavor-types/vm.png)
 
-## Sensor
+### Sensor
 
 ![sensor](models/examples/img/flavor-types/sensor.png)
 
-## Service
+### Service
 
 ![service](models/examples/img/flavor-types/service.png)
