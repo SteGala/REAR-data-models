@@ -58,6 +58,27 @@ The VM Flavor type has the following characteristics:
 ### Sensor
 
 ![sensor](models/examples/img/flavor-types/sensor.png)
+(TODO: I don't see anywhere the type of sensor (temperature, humidity, ...). If I understood correctly the sensor type describes the technology used, maybe we need another field in the datastructure describing that)
+The Sensor Flavor type has the following characteristics:
+ - Characteristics
+   - SensorType, the type of sensor described by the FlavorType [one of][Environmental, Motion, Proximity, Infrared] 
+   - SensorModel, the model of the sensor [string]
+   - SensorManufacturer, the sensor manifacturer [string]
+   - SensorMarket, (TODO: describe what that means) [string]
+   - SamplingRate, the frequency of the measurements (unit sample/sec) [integer]
+   - Accuracy, the accuracy reported for the measurements (unit percentage) [0-1]
+   - Consumption, the power consumption of the reported sensor (unit mW) [integer]
+   - Interface, (TODO: describe what that means)
+   - AdditionalProperties
+     - MeasurementUnit, further details the measurement unit
+     - ConsumptionUnit
+     - SamplingRateUnit
+     - AccessProtocol
+ - Policy
+   - Aggregatable, describing if multiple instances can be aggregated in one single virtual node
+     - MinCount (unit count)[integer]
+     - MaxCount (unit count)[integer]
+
 
 ### Service
 
