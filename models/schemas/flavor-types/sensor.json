@@ -21,6 +21,10 @@
                 "SamplingRate": {
                     "type": "integer",
                     "description": "The sampling rate of the sensor in milliseconds"
+                },
+                "Latency": {
+                    "type": "integer",
+                    "description": "The latency of the Flavor."
                 }
             }
         },

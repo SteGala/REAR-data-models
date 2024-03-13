@@ -1,16 +1,20 @@
 {
-    "Sensor": {
-      "Characteristics": {
-        "SensorType": "Temperature",
-        "SensorModel": "ABC123",
-        "SensorManufacturer": "XYZ Company",
-        "SamplingRate": 1000
-      },
-      "SecurityStandards": ["UL Listed"],
-      "AccessType": {
-        "HTTP": {
-          "method": ["POST", "GET"]
-        }
+  "sensor": {
+    "SensorType": "Temperature",
+    "SensorModel": "ABC123",
+    "SensorManufacturer": "XYZ Company",
+    "SamplingRate": 1000,  
+    "Latency": 50,        
+    "SecurityStandards": [
+      "GDPR"
+    ],
+    "AccessType": {
+      "HTTP": {
+        "method": [
+          "GET",
+          "POST"
+        ]
       }
     }
   }
+}
