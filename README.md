@@ -1,7 +1,7 @@
 # Resources
 
 The resource data model can be summarized in the following:
- - Flavor
+ - [Flavor](#flavor)
  - FlavorType
    - [K8Slice](#K8Slice)
    - [VM](#VM)
@@ -10,6 +10,8 @@ The resource data model can be summarized in the following:
    - [Sensor](#Sensor)
 
 ## Flavor
+
+![flavor](models/examples/img/flavor.png)
 
 ## FlavorType
 
