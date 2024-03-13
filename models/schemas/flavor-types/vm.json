@@ -33,6 +33,10 @@
                         "type": "string",
                         "description": "Security standards supported by the Flavor (e.g., GDPR)."
                     }
+                },
+                "Latency": {
+                    "type": "integer",
+                    "description": "The latency of the Flavor."
                 }
             },
             "additionalProperties": false
