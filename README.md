@@ -38,6 +38,10 @@ The Flavor has the following characteristics:
 
 ## FlavorType
 
+The FlavorType describes the actual flavor that is adverised.
+
+> **The filtering mechanism implemented in REAR relies on the Flavortype. Therefore, any field for which we want to implement some filtering criteria should be included in the corresponding FlavorType (e.g., if I want to filter a FlavorType depending on the latency, I need to include that field in the related FlavorType).**
+
 ### K8Slice
 
 ![K8slice](models/examples/img/flavor-types/k8slice.png)
@@ -108,3 +112,24 @@ The Sensor Flavor type has the following characteristics:
 ### Service
 
 ![service](models/examples/img/flavor-types/service.png)
+
+The service FlavorType has the following characteristics:
+ - Characteristics
+   - Name, the name of the service flavor [string].
+   - Description, a description of the service flavor [string].
+   - Tags, an array of strings representing tags associated with the flavor.
+   - Plan, the plan associated with the service flavor [string].
+   - Latency, the latency of the service flavor in milliseconds [integer].
+ - ServiceType: A reference to a specific service type schema using a JSON reference ($ref) to an external file like "service-types/db.json". This allows defining details specific to each service type.
+
+
+<!--
+@startuml firstDiagram
+
+Alice -> Bob: Hello
+Bob -> Alice: Hi!
+	
+@enduml
+-->
+
+

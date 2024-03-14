@@ -25,14 +25,12 @@
                 "Plan": {
                     "type": "string",
                     "description": "Plan of the flavor."
+                },
+                "Latency": {
+                    "type": "integer",
+                    "description": "The latency of the Flavor."
                 }
-            },
-            "required": [
-                "Name",
-                "Description",
-                "Tags"
-            ],
-            "additionalProperties": false
+            }
         },
         "ServiceType": {
             "oneOf": [
