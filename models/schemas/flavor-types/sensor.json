@@ -18,50 +18,88 @@
                     "type": "string",
                     "description": "The manufacturer of sensor"
                 },
+                "SensorMarket": {
+                    "type": "string",
+                    "description": "The market of sensor"
+                },
                 "SamplingRate": {
                     "type": "integer",
                     "description": "The sampling rate of the sensor in milliseconds"
                 },
+                "Accuracy": {
+                    "type": "integer",
+                    "description": "The accuracy reported for the measurements (unit percentage)"
+                },
+                "Consumption": {
+                    "type": "integer",
+                    "description": "The power consumption of the reported sensor (unit mW)"
+                },
+                "Interface": {
+                    "type": "string",
+                    "description": "Not clear what that means."
+                },
+                "SecurityStandards": {
+                    "type": "array",
+                    "items": {
+                        "type": "string",
+                        "description": "Security standards supported by the Flavor (e.g., GDPR)."
+                    }
+                },
                 "Latency": {
                     "type": "integer",
                     "description": "The latency of the Flavor."
-                }
-            }
-        },
-        "SecurityStandards": {
-            "type": "array",
-            "items": {
-                "type": "string",
-                "description": "Security standards supported by the Flavor (e.g., GDPR)."
-            }
-        },
-        "AccessType": {
-            "oneOf": [
-                {
+                },
+                "additionalProperties": {
                     "type": "object",
-                    "title": "HTTP",
+                    "description": "Additional properties of the sensor",
                     "properties": {
-                        "method": {
-                            "type": "array",
-                            "items": {
+                        "MeasurementUnit": {
+                            "type": "string",
+                            "description": "The unit of measure for the measurements"
+                        },
+                        "ConsumptionUnit": {
+                            "type": "string",
+                            "description": "The unit of measure for the sensor power consumption"
+                        },
+                        "SamplingRateUnit": {
+                            "type": "string",
+                            "description": "The unit of measure for the sampling rate"
+                        },
+                        "AccessProtocol": {
+                            "type": "string",
+                            "description": "Not sure what that means"
+                        }
+                    }
+                }
+            },
+            "AccessType": {
+                "oneOf": [
+                    {
+                        "type": "object",
+                        "title": "HTTP",
+                        "properties": {
+                            "method": {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "description": "HTTP method supported."
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "type": "object",
+                        "title": "MQTT",
+                        "properties": {
+                            "QoS": {
                                 "type": "string",
-                                "description": "HTTP method supported."
+                                "title": "QoS",
+                                "description": "QoS level guaranteed."
                             }
                         }
                     }
-                },
-                {
-                    "type": "object",
-                    "title": "MQTT",
-                    "properties": {
-                        "QoS": {
-                            "type": "string",
-                            "title": "QoS",
-                            "description": "QoS level guaranteed."
-                        }
-                    }
-                }
-            ]
+                ]
+            }
         }
     }
 }
