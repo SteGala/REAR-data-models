@@ -11,7 +11,30 @@ The resource data model can be summarized in the following:
 
 ## Flavor
 
+The Flavor data model wraps the FlavorType and contains informations shared among all the different FlavorTypes.
+
 ![flavor](models/examples/img/flavor.png)
+
+The Flavor has the following characteristics:
+ - FlavorID, the unique identifier for the flavor [string].
+ - ProviderID, the unique identifier for the provider [string].
+ - Location, defines the flavor's location with:
+   - latitude 
+   - longitude
+   - altitude (unit meters) [integer]
+   - optional additional notes [string].
+ - NetworkPropertyType, the type of network property ensured by the provider (e.g., "5G", "Wifi", "Ethernet") [list of string]
+ - FlavorType, a reference to a specific flavor type schema using JSON references ($ref) to external files like "k8slice.json", "vm.json", etc. This allows defining details specific to each flavor type.
+ - Price, defines the flavor's price with: 
+   - amount [integer]
+   - currency [string]
+   - period [string].
+ - Owner: Information about the node that owns the flavor, including:
+   - domain [string]
+   - node ID [string]
+   - IP [string]
+   - optional additional information with a property for "LiqoID" [string]
+ - OptionalFields: Contains optional properties like "Availability" [bool] and "WorkerID" [string] for the worker providing the flavor.
 
 ## FlavorType
 
