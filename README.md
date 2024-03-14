@@ -6,7 +6,7 @@ The resource data model can be summarized in the following:
    - [K8Slice](#K8Slice)
    - [VM](#VM)
    - [Service](#Service)
-     - DB
+     - [DB](#ServiceType-DB)
    - [Sensor](#Sensor)
 
 ## Flavor
@@ -83,7 +83,6 @@ The VM Flavor type has the following characteristics:
      - MinCount (unit count)[integer]
      - MaxCount (unit count)[integer]
 
-
 ### Sensor
 
 ![sensor](models/examples/img/flavor-types/sensor.png)
@@ -108,7 +107,6 @@ The Sensor Flavor type has the following characteristics:
      - MinCount (unit count)[integer]
      - MaxCount (unit count)[integer]
 
-
 ### Service
 
 ![service](models/examples/img/flavor-types/service.png)
@@ -122,14 +120,6 @@ The service FlavorType has the following characteristics:
    - Latency, the latency of the service flavor in milliseconds [integer].
  - ServiceType: A reference to a specific service type schema using a JSON reference ($ref) to an external file like "service-types/db.json". This allows defining details specific to each service type.
 
+#### ServiceType DB
 
-<!--
-@startuml firstDiagram
-
-Alice -> Bob: Hello
-Bob -> Alice: Hi!
-	
-@enduml
--->
-
-
+![serviceDB](models/examples/img/flavor-types/service-types/db.png)
