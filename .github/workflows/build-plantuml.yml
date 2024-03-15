@@ -17,9 +17,12 @@ jobs:
           bash models/examples/generate_puml.sh
           # Add any additional commands your script might need (e.g., install dependencies)
 
-      - name: Add generated files
+      - name: Commit changes
         run: |
-          git config --global user.name "GitHub Actions (script)"  # Informative name
+          git config --local user.email "actions@github.com"
+          git config --local user.name "GitHub Actions"
           git add .
-          git commit -m "Generated plantUML by script"
-          git push origin master
+          git commit -m "Auto-generated files"
+          git push origin HEAD:master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
