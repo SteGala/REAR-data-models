@@ -1,5 +1,12 @@
 # Resources
 
+```plantuml
+@startuml firstDiagram
+Alice -> Bob: Hello
+Bob -> Alice: Hi!
+@enduml
+```
+
 The resource data model can be summarized in the following:
  - [Flavor](#flavor)
  - FlavorType
