@@ -9,6 +9,8 @@ The resource data model can be summarized in the following:
      - [DB](#ServiceType-DB)
    - [Sensor](#Sensor)
 
+In the following we represent some examples of JSON, you can find the original JSON schemas [here](https://github.com/SteGala/REAR-data-models/tree/master/models/schemas).
+
 ## Flavor
 
 The Flavor data model wraps the FlavorType and contains informations shared among all the different FlavorTypes.
