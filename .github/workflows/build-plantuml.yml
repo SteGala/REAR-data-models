@@ -11,10 +11,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4  # Checkout your repository code
 
-      - name: Run your script
+      - name: Run script
         run: |
-          bash models/schemas/generate_puml.sh  
-          bash models/examples/generate_puml.sh
+          cd models/schemas/
+          bash ./generate_puml.sh  
+          cd ../examples
+          bash ./generate_puml.sh
           # Add any additional commands your script might need (e.g., install dependencies)
 
       - name: Commit changes
