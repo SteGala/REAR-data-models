@@ -34,7 +34,7 @@
         },
         "NetworkPropertyType": {
             "type": "string",
-            "description": "Type of network property ensured by the privider (e.g., 5G, Wifi, Ethernet, etc.)"
+            "description": "Type of network property ensured by the privider (e.g., 5G, Wifi, Ethernet)"
         },
         "FlavorType": {
             "oneOf": [
