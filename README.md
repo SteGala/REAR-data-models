@@ -1,12 +1,5 @@
 # Resources
 
-```plantuml
-@startuml firstDiagram
-Alice -> Bob: Hello
-Bob -> Alice: Hi!
-@enduml
-```
-
 The resource data model can be summarized in the following:
  - [Flavor](#flavor)
  - FlavorType
@@ -20,7 +13,7 @@ The resource data model can be summarized in the following:
 
 The Flavor data model wraps the FlavorType and contains informations shared among all the different FlavorTypes.
 
-![flavor](models/examples/img/flavor.png)
+![flavor](https://plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/SteGala/REAR-data-models/master/models/examples/puml/flavor.txt&fmt=svg)
 
 The Flavor has the following characteristics:
  - FlavorID, the unique identifier for the flavor [string].
@@ -51,7 +44,7 @@ The FlavorType describes the actual flavor that is adverised.
 
 ### K8Slice
 
-![K8slice](models/examples/img/flavor-types/k8slice.png)
+![K8slice](https://plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/SteGala/REAR-data-models/master/models/examples/puml/flavor-types/k8slice.txt&fmt=svg)
 
 The K8Slice Flavor type has the following characteristics:
  - Characteristics: 
@@ -74,7 +67,7 @@ The K8Slice Flavor type has the following characteristics:
 
 ### VM
 
-![vm](models/examples/img/flavor-types/vm.png)
+![vm](https://plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/SteGala/REAR-data-models/master/models/examples/puml/flavor-types/vm.txt&fmt=svg)
 
 The VM Flavor type has the following characteristics:
  - Characteristics:
@@ -92,7 +85,7 @@ The VM Flavor type has the following characteristics:
 
 ### Sensor
 
-![sensor](models/examples/img/flavor-types/sensor.png)
+![sensor](https://plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/SteGala/REAR-data-models/master/models/examples/puml/flavor-types/sensor.txt&fmt=svg)
 (TODO: I don't see anywhere the type of sensor (temperature, humidity, ...). If I understood correctly the sensor type describes the technology used, maybe we need another field in the datastructure describing that)
 The Sensor Flavor type has the following characteristics:
  - Characteristics
@@ -116,7 +109,7 @@ The Sensor Flavor type has the following characteristics:
 
 ### Service
 
-![service](models/examples/img/flavor-types/service.png)
+![service](https://plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/SteGala/REAR-data-models/master/models/examples/puml/flavor-types/service.txt&fmt=svg)
 
 The service FlavorType has the following characteristics:
  - Characteristics
