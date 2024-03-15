@@ -19,7 +19,17 @@ jobs:
           bash ./generate_puml.sh
           # Add any additional commands your script might need (e.g., install dependencies)
 
+      - name: Check for changes
+        id: git-check
+        run: |
+          if [[ -n "$(git status --porcelain)" ]]; then
+            echo "::set-output name=changes::true"
+          else
+            echo "::set-output name=changes::false"
+          fi
+          
       - name: Commit changes
+        if: steps.git-check.outputs.changes == 'true'
         run: |
           git config --local user.email "actions@github.com"
           git config --local user.name "GitHub Actions"
