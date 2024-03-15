@@ -1,0 +1,25 @@
+name: Generate Files
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest  # You can choose a different runner OS if needed
+
+    steps:
+      - uses: actions/checkout@v4  # Checkout your repository code
+
+      - name: Run your script
+        run: |
+          bash models/schemas/generate_puml.sh  
+          bash models/examples/generate_puml.sh
+          # Add any additional commands your script might need (e.g., install dependencies)
+
+      - name: Add generated files
+        run: |
+          git config --global user.name "GitHub Actions (script)"  # Informative name
+          git add .
+          git commit -m "Generated plantUML by script"
+          git push origin master
