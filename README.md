@@ -1,3 +1,25 @@
+# Content of this repository
+
+The repository is organized as follows:
+
+```
+.
+├── models
+    ├── examples
+    |   ├── json              # contains JSON examples generated from JSON schemas
+    |   ├── puml              # contains the puml files displayed in the README (do not edit)
+    |   └── generate_puml.sh  # utility tool to generate the puml files from examples
+    └── schemas               # contains all the JSON schemas
+        ├── puml              # contains the puml files displayed in the README (do not edit)
+        └── generate_puml.sh  # utility tool to generate the puml files from schemas
+```
+
+# How to use
+
+A GitHub action automatically generates the images contained in the README starting from the JSON files contained both in the examples and schemas subfolders.
+
+Still, the generation of examples of JSONs (starting from the schema) is not automated yet. Therefore, we suggest to use tools like ChatGPT or Gemini, providing the JSON schema to the prompt and asking for an example of compliant JSON. 
+
 # Resources
 
 The resource data model can be summarized in the following:
@@ -124,4 +146,3 @@ The service FlavorType has the following characteristics:
 
 #### ServiceType DB
 
-![serviceDB](models/examples/img/flavor-types/service-types/db.png)
